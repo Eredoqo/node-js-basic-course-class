@@ -1,0 +1,41 @@
+
+GET http://127.0.0.1:3000/getAllBooks
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDUsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzE5NTY0ODI1fQ.n3MEOY35V1Mif6AWCX8Cy78lAq7iW07D3bEixL52kZI
+
+###
+GET http://127.0.0.1:3000/getAllBooks?publicationyear=2010
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDUsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzE5NTY0ODI1fQ.n3MEOY35V1Mif6AWCX8Cy78lAq7iW07D3bEixL52kZI
+###
+GET http://127.0.0.1:3000/getAllBooks?sort=ASC
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6InVzZXIiLCJpYXQiOjE3MTk1NjE4Nzh9.5rNn2OeyUlBy5l_23lqxT1ROQjHsIFAhaTKE9Sxf1cw
+###
+GET http://127.0.0.1:3000/getBooksByIsbn/10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6InVzZXIiLCJpYXQiOjE3MTk1NjE4Nzh9.5rNn2OeyUlBy5l_23lqxT1ROQjHsIFAhaTKE9Sxf1cw
+
+###
+
+POST http://127.0.0.1:3000/createNewBook
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDYsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcxOTU2NTEwMX0.iaugDhIuHsijzRdh3kEGqZL7Atv2B3n3nIXptq_DTSs
+
+{
+    "title": "test1",
+    "author": "Redinel",
+    "isbn": 20445,
+    "publicationYear": 2024
+}
+###
+
+PUT http://127.0.0.1:3000/updateBookByIsbn/2011
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDUsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzE5NTY0ODI1fQ.n3MEOY35V1Mif6AWCX8Cy78lAq7iW07D3bEixL52kZI
+
+{
+    "title": "Title changed right now",
+    "author": "Updated Author",
+    "publicationYear": 2025
+}
+
+###
+DELETE http://127.0.0.1:3000/deleteBookByIsbn/2011
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6InVzZXIiLCJpYXQiOjE3MTk1NjE4Nzh9.5rNn2OeyUlBy5l_23lqxT1ROQjHsIFAhaTKE9Sxf1cw

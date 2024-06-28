@@ -1,0 +1,22 @@
+POST http://127.0.0.1:8080/signup
+Content-Type: application/json
+
+{
+    "username": "adminn",
+    "password": "12345",
+    "role": "admin"
+}
+
+###
+
+POST http://127.0.0.1:8080/login
+Content-Type: application/json
+
+{
+    "username": "adminn",
+    "password": "12345"
+}
+
+###
+GET http://127.0.0.1:8080/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDUsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzE5NTY0ODI1fQ.n3MEOY35V1Mif6AWCX8Cy78lAq7iW07D3bEixL52kZI
